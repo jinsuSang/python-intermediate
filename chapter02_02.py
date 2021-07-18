@@ -2,7 +2,6 @@
 # 규모가 큰 프로젝트 -> 함수 중심
 
 # self 는 인스턴스 자신의 고유값을 저장하는 예약어
-import time
 
 
 class Car:
@@ -20,6 +19,7 @@ class Car:
     def __init__(self, company, details):
         self.__company = company
         self.__details = details
+        self.__secret = 'secret'
         Car.car_count += 1
 
     def __del__(self):
