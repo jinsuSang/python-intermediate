@@ -49,6 +49,18 @@ None
 
 '''
 
+print('---------')
+print(dis('''
+chars = '+_)(*&^%$#@!~'
+list(filter(lambda x: x > 40, map(ord, chars)))
+'''))
+print('---------')
+print(dis('''
+chars = '+_)(*&^%$#@!~'
+[ord(x) for x in chars if ord(x) > 40]
+'''))
+
+
 # comprehending Set
 from unicodedata import name
 
