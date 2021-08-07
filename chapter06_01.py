@@ -12,11 +12,15 @@ t = 'ABCDEFGHIJKLMNOPQRSTQVWXYZ'
 for c in t:
     print(c)
 
+print()
+
 # '__next__'
 w = iter(t)
 print(next(w))
 print(next(w))
 print(next(w))
+
+print()
 
 while True:
     try:
@@ -83,7 +87,6 @@ class WordSplitGenerator:
 wg = WordSplitGenerator('Do today what you could do tomorrow')
 wt = iter(wg)
 
-print(next(wt))
 print(next(wt))
 print(next(wt))
 print(next(wt))

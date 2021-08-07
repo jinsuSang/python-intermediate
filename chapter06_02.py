@@ -18,7 +18,6 @@ temp = iter(generator_ex1())
 for v in temp:
     print(v)
 
-
 temp2 = [x * 3 for x in generator_ex1()]
 temp3 = (x * 3 for x in generator_ex1())
 
@@ -33,6 +32,7 @@ print()
 # filterfalse, takewhile, accumulate, chain, product, groupby
 
 import itertools
+
 gen1 = itertools.count(1, 2.5)
 
 print(next(gen1))
@@ -47,7 +47,7 @@ print(next(gen1))
 
 # 조건
 
-gen2 = itertools.takewhile(lambda n : n < 1000, itertools.count(1, 2.5))
+gen2 = itertools.takewhile(lambda n: n < 10, itertools.count(1, 2.5))
 
 for v in gen2:
     print(v)
@@ -62,11 +62,15 @@ for v in gen2:
 print()
 
 # 필터 반대
-gen3 = itertools.filterfalse(lambda n : n < 3, [i for i in range(1, 11)])
+gen3 = itertools.filterfalse(lambda n: n < 3, [i for i in range(1, 11)])
 
 for v in gen3:
     print(v)
 
+gen10 = itertools.filterfalse(lambda n: n % 2, [i for i in range(1, 11)])
+
+for v in gen10:
+    print(v)
 
 print()
 
@@ -108,4 +112,3 @@ for char, group in gen9:
 # C : ['C', 'C']
 # D : ['D', 'D']
 # E : ['E', 'E', 'E', 'E']
-
